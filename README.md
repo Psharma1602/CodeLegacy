@@ -2,7 +2,7 @@ CodeLegacy
 
 ## Description
 
-Programmer Tributes is a collection of tribute pages dedicated to honoring influential programmers who have made significant contributions to the field of computer science and technology. Each tribute page highlights the life, work, and achievements of a prominent programmer, providing insight into their impact on the industry and their lasting legacy.
+ CodeLegacy is a collection of tribute pages dedicated to honoring influential programmers who have made significant contributions to the field of computer science and technology. Each tribute page highlights the life, work, and achievements of a prominent programmer, providing insight into their impact on the industry and their lasting legacy.
 
 ## Table of Contents
 
@@ -33,9 +33,17 @@ Version Control: The project utilizes version control systems such as Git to man
 ## Dependencies
 Image sources::
 1. Alan Turing:-"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnsNYBQ23v9dxxfwlDRXlLnR8KAbrS7mTwYDurRUx2FihYC_SQe8dcuNkN7Hru8wStvkg&usqp=CAU"
-2. 
-
-
+2. Tim Berners Lee:-"https://upload.wikimedia.org/wikipedia/commons/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg"
+3. Anita Borg:-"https://wpassets.ncwit.org/wp-content/uploads/2021/05/14024813/291.jpg"
+4. Steve Jobs:- "https://upload.wikimedia.org/wikipedia/commons/5/54/Steve_Jobs.jpg"
+5. Ada Lovelace:-"https://media.newyorker.com/photos/64123041652f9d9fe976fff0/master/pass/ra1146.jpg"
+6. Charles Babbage:- "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Charles_Babbage_-_1860.jpg/800px-Charles_Babbage_-_1860.jpg"
+7. Annie Easley:- "https://upload.wikimedia.org/wikipedia/commons/f/fc/Annie_Easley.jpg"
+8. Arvind Krishna Joshi:-"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuaeIMHEWcWv3Wus93aTKiLarlfhPCGZsIwDRQvLVvJiFc1ZtkdnSWoYBL8tarlUyoyAw&usqp=CAU"
+9. Grace Hopper:- "https://upload.wikimedia.org/wikipedia/commons/a/ad/Commodore_Grace_M._Hopper%2C_USN_%28covered%29.jpg"
+10. Margret Hamilton:- "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUSEhIVFRUXFRc"
+11. Dennis Ritchie:- "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgVFhYYGRgYGhwYHBwYGhwYHBkcGBoaHB4YGhwc
+12. James Gosling:- "https://i.imgur.com/lAi4VEJ.png?1"
 
 ## Testing
 
