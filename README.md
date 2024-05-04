@@ -115,7 +115,9 @@ Chitkara university - For giving us oppurtunity to work on such a project
 
 ## logs record
 
-Keep a record of changes made to the project over time, including new features, bug fixes, and updates.
+1. First log:- 3rd May at 10:29pm(IST) for Readme file (Palak Sharma).
+2. Second log:- 4th May at 2:12pm(IST) Directing Page (Palak).
+3. Third log :- 4th May at 2:52pm(IST) Home Page.
 
 
 
