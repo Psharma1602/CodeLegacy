@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+            
+
+            @import url('https://fonts.googleapis.com/css?family=Montserrat');
+            
+            *
+            {
+              margin: 0;
+              padding: 0;
+              border: 0
+            }
+            
+          
+          
+            
+            picture {
+              border-radius: 50%;
+            }
+            mn{
+              float: right;
+            }
+            .title-word {
+              animation: color-animation 1.5s linear infinite;
+            }
+            
+            .title-word-1 {
+              --color-1: #f0ecea;
+              --color-2: #35393b;
+              --color-3: #170b0b;
+            }
+            
+            .title-word-2 {
+              --color-1: #35393b;
+              --color-2: #ACCFCB;
+              --color-3:  #170b0b;
+            }
+            
+            .title-word-3 {
+              --color-1: #ACCFCB;
+              --color-2:  #170b0b;
+              --color-3: #ACCFCB;
+            }
+            
+            .title-word-4 {
+              --color-1: #170b0b;
+              --color-2:  #f0ecea;
+              --color-3: #35393b;
+            }
+            
+            @keyframes color-animation {
+              0%    {color: var(--color-1)}
+              32%   {color: var(--color-1)}
+              33%   {color: var(--color-2)}
+              65%   {color: var(--color-2)}
+              66%   {color: var(--color-3)}
+              99%   {color: var(--color-3)}
+              100%  {color: var(--color-1)}
+            }
+            .title {
+              font-family: "Montserrat", sans-serif;
+              font-weight: 800;
+              font-size: 6.8vw;
+              text-transform: uppercase;
+              text-align: center;
+            }
+            
+            /* === removing default button style ===*/
+            .button {
+              margin: 0;
+              height: auto;
+              background: transparent;
+              padding: 0;
+              border: none;
+            }
+            
+            /* button styling */
+            .button {
+              --border-right: 6px;
+              --text-stroke-color: rgba(255,255,255,0.6);
+              --animation-color: #030005;
+              --fs-size: 2em;
+              letter-spacing: 3px;
+              text-decoration: none;
+              font-size: var(--fs-size);
+              font-family: "Arial";
+              position: relative;
+              text-transform: uppercase;
+              color: transparent;
+              -webkit-text-stroke: 1px var(--text-stroke-color);
+            }
+            /* this is the text, when you hover on button */
+            .hover-text {
+              position: absolute;
+              box-sizing: border-box;
+              content: attr(data-text);
+              color: var(--animation-color);
+              width: 0%;
+              inset: 0;
+              border-right: var(--border-right) solid var(--animation-color);
+              overflow: hidden;
+              transition: 0.5s;
+              -webkit-text-stroke: 1px var(--animation-color);
+            }
+            /* hover */
+            .button:hover .hover-text {
+              width: 100%;
+              filter: drop-shadow(0 0 23px var(--animation-color))
+            }
+            
+            button {
+             padding: 0.8em 1.8em;
+             border: 2px solid #17C3B2;
+             position: relative;
+             overflow: hidden;
+             background-color: transparent;
+             text-align: center;
+             text-transform: uppercase;
+             font-size: 16px;
+             transition: .3s;
+             z-index: 1;
+             font-family: inherit;
+             color: #17C3B2;
+            }
+            
+            button::before{
+             content: '';
+             width: 0;
+             height: 300%;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%) rotate(45deg);
+             background: #17C3B2; 
+             transition: .5s ease;
+             display: block;
+             z-index: -1;
+            
+            }
+            .timeline {
+                      position: relative;
+                      max-width: 1200px;
+                      margin: 0 auto;
+                    }
+                    
+                    
+                    
+                    /* Container around content */
+                    .container {
+                      padding: 10px 40px;
+                      position: relative;
+                      background-color: inherit;
+                      width: 50%;
+                    }
+                    
+                    /* The circles on the timeline */
+                    .container::after {
+                      content: '';
+                      position: absolute;
+                      width: 25px;
+                      height: 25px;
+                      right: -17px;
+                      background-color: white;
+                      border: 4px solid #FF9F55;
+                      top: 15px;
+                      border-radius: 50%;
+                      z-index: 1;
+                    }
+                    
+                    /* Place the container to the left */
+                    .left {
+                      left: 0;
+                    }
+                    
+                    /* Place the container to the right */
+                    .right {
+                      left: 50%;
+                    }
+                    
+                    /* Add arrows to the left container (pointing right) */
+                    .left::before {
+                      content: " ";
+                      height: 0;
+                      position: absolute;
+                      top: 22px;
+                      width: 0;
+                      z-index: 1;
+                      right: 30px;
+                      border: medium solid white;
+                      border-width: 10px 0 10px 10px;
+                      border-color: transparent transparent transparent white;
+                    }
+                    
+                    /* Add arrows to the right container (pointing left) */
+                    .right::before {
+                      content: " ";
+                      height: 0;
+                      position: absolute;
+                      top: 22px;
+                      width: 0;
+                      z-index: 1;
+                      left: 30px;
+                      border: medium solid white;
+                      border-width: 10px 10px 10px 0;
+                      border-color: transparent white transparent transparent;
+                    }
+                    
+                    /* Fix the circle for containers on the right side */
+                    .right::after {
+                      left: -16px;
+                    }
+                    
+                    /* The actual content */
+                    .content {
+                      padding: 20px 30px;
+                      background-color: white;
+                       font-size: x-large;
+                      position: relative;
+                      border-radius: 6px;
+                    }
+                    
+                    /* Media queries - Responsive timeline on screens less than 600px wide */
+                    @media screen and (max-width: 600px) {
+                      /* Place the timelime to the left */
+                      .timeline::after {
+                      left: 31px;
+                      }
+                      
+                      /* Full-width containers */
+                      .container {
+                      width: 100%;
+                      padding-left: 70px;
+                      padding-right: 25px;
+                      }
+                      
+                      /* Make sure that all arrows are pointing leftwards */
+                      .container::before {
+                      left: 60px;
+                      border: medium solid white;
+                      border-width: 10px 10px 10px 0;
+                      border-color: transparent white transparent transparent;
+                      }
+                    
+                      /* Make sure all circles are at the same spot */
+                      .left::after, .right::after {
+                      left: 15px;
+                      }
+                      
+                      /* Make all right containers behave like the left ones */
+                      .right {
+                      left: 0%;
+                      }
+                    }
+                    #grad1{
+                height: 1100px;
+                width:1500px;
+                background-image:linear-gradient(to right,#ddd6f3, #4b4746);
+                font-size:xx large;
+            }
+            mn{
+                text-align:left  ;
+            }
+            
+                 
+    </style>
+</head>
+<body>
+    <center> <img src="https://www.azquotes.com/picture-quotes/quote-we-re-at-unique-point-in-history-where-the-things-that-we-are-building-are-going-to-anita-borg-82-29-67.jpg" width="100%"></center>
+    <h2 class="title">
+        <span class="title-word title-word-1">About</span>
+     </div>
+     <p style="font-size: 20px;"><i><b>In 1987, computer scientist Dr. Anita Borg started a digital community for women in computing. 
+          Over the years, that community has grown and changed to become the leading organization for women in technology. Today, AnitaB.org 
+          works with women technologists in more than 50 countries, and partners with leading academic institutions and Fortune 500 companies.
+          In 2002, Anita was diagnosed with cancer, and she asked her close friend Telle to step in as interim CEO of IWT. Following Anita’s 
+          death in 2003, IWT was renamed the Anita Borg Institute in her honor. With the blessing of the Board of Trustees, Telle then 
+          assumed the permanent role of President and CEO, a title that she held until her retirement in 2017. Over the course of her 
+          leadership, Telle led the institute to substantial growth in both size and impact. Under her care, the Grace Hopper Celebration 
+          grew into the world’s most influential conference for women technologists, drawing just 630 attendees in 2002, but more than 
+          22,000 in 2018.Systers was established to provide a private space for its members to seek input and share advice based on their 
+          common experiences. Systers membership was limited to women with highly technical training and discussions were strictly confined 
+          to technical issues. Borg oversaw Systers until 2000.[8] Systers occasionally tackled issues that were not highly technical but 
+          pertained to its members. In 1992, when Mattel Inc. began selling a Barbie doll that said math class is tough, the voices of 
+          protest that started with the Systers list played a role in getting Mattel to remove that phrase from Barbie's 
+          microchip</b></i></p>
+
+          <h2 class="title">
+            <span class="title-word title-word-1">Timeline</span>
+         </div>
+         
+         <div id="grad1">
+          <div class="timeline">
+            <div class="container left">
+              <div class="content">
+                  <h2>1949</h2>
+                  Anita Borg was born on 17 January,1949
+                  </div>
+                  </div>
+                  <div class="container right">
+                      <div class="content">
+  
+              
+                <h2>1950</h2>
+                Borg was born Anita Borg Naffz in Chicago, Illinois. She grew up in Palatine, 
+                          Illinois; Kaneohe, Hawaii; and Mukilteo, Washington.
+              </div>
+            </div>
+            <div class="container left">
+              <div class="content">
+                <h2>1969</h2>
+                Anita Borg got her first programming job in 1969
+              </div>
+            </div>
+            <div class="container right">
+              <div class="content">
+                <h2>1981</h2>
+                She was awarded a PhD in Computer Science by New York University in 1981 for research investigating the synchronization 
+                efficiency of operating systems. 
+              </div>
+            </div>
+            <div class="container left">
+              <div class="content">
+                <h2>1986</h2>
+                In 1986, she began working for Digital Equipment Corporation, where she spent 12 years, first at the Western Research Laboratory
+              </div>
+           
+         
+         </div>
+         </h2>
+
+       <h2 class="title">
+            <span class="title-word title-word-1">Childhood</span>
+         </div>
+         <p style="font-size: large;"><i><b>Borg was born Anita Borg Naffz in Chicago, Illinois. She grew up in Palatine, Illinois; Kaneohe, Hawaii; and Mukilteo, 
+            Washington.Borg got her first programming job in 1969. Although she loved math while growing up, she did not originally 
+            intend to go into computer science and taught herself how to program while working at a small insurance company. She was 
+            awarded a PhD in Computer Science by New York University in 1981 for research investigating the synchronization efficiency of 
+            operating systems supervised by Robert Dewar and Gerald Belpaire.</b></i></p>
+
+            <center>
+                <img src="https://blog.hnf.de/wp-content/uploads/2022/01/AnitaBorg.jpg" height="300" width="300"></center>
+                 
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQneATFSr5GpvNr3J9Bj63baBDfaB1IF7-QKA&usqp=CAU" height="300" width="300">
+                <mn><img src="https://flatironschool.com/legacy-assets/images.ctfassets.net/hkpf2qd2vxgx/2jmCFWEJPZM0q9UUdV5E8w/0d258fe1a0497083ea089e631b219532/tumblr_inline_nia1roKk7A1rtan47.jpg" height="300" width="300"></mn>
+                <center> <h2 style="font-family: 'Times New Roman', Times, serif; font-size: x-large;"> If you are keen to know more , then click on 'Learn More'</h2>
+                <p class="font-size:15px"><a href="https://en.wikipedia.org/wiki/Anita_Borg">Learn More</a>
+                    <p style="font-size:15px;">FOLLOW US ON OUR SOCIAL MEDIA</p>
+                    <img src="data:image/jpeg;base64,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"
+                        width="20" height="20"><a href="https://www.instagram.com/"> Instagram Page</a>
+                    <h6></h6>
+                    <img src="data:image/png;base64,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"
+                        width="20" height="20"><a href="https://www.twitter.com/"> Twitter Page</a>
+                    <h6></h6>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEU7WZj///8lS5Hh5O0hSJDz9PgxU5XV2eYsT5P7/P22vtQpTZI4V5ckSpHJz9/k5+8bRY9EYJyNm71yhLB6i7Skr8pccqartM2Wo8JRaqHY3OcAOIk/XJpjeKmcqMWIl7tLZZ9sf63DytxgdaeCkbiyu9G2d+NmAAAEcklEQVR4nO3dbXOTQBiFYdjAQsvyEgJpWjW1tf7/vyixZhqdaTgBHpYHz/3JGafIZRMC2V0Iwo/icrOOyvhCFZz/UDRZlJt1lEdpU/wjTLbGumA9OWu2yaWwrtbEe89V9Ydwl/neHZGy3VlYrxPYEet3YVL53hOxquS3cLu+9+A5tz0JC+N7PwQzRSdsrO/dEMw2nTBb74u0e5mmYRBHvvdCtCgOytz3ToiWl8FmzQea7lCzoVB7FOqPQv1RqD8K9Ueh/ijUH4X6o1B/FPrOWZv+yab2lHMuuOXrz8UKnbNZFH391tTH9uFU2x4P9fPb7uXH96D7m9yYrCP3W5cpdDY3L8eiDD8tLjfF68Ph7bGXuEShjR7bp89xf3Wf9m1tcUJngvbK70690EX7op+lV+jyPfrq1Cm07rbfnzrhn5kTqxXaNBkAVCRM93dDgHqEWTPIp0dohrwFNQnN81CgEmE69CWqRWj3w4FKhMOOonqE1a0natqE6WEMUIHQfR0FVCCMBp2rKRK6l3HA5QurGy7nVQrtbiRw8cJo1CeFAqF7HAtcujC9X7swGnO+pkE4/jizdGH2unZhFPcLVAsnOJIuXGjHXVUoEKY3vA3L+8PuMUizc+eVlFn/YhiPwhw9J71rt1F2GgwdtPLFo9CAwDZKxyzq8Sd04BdQP0bunj+hfYOA+7HLzjwKjwiw7j1W9uVPCJ12l+NXt/oTZshw6Nv4pZH+hAa5+p1g4aA/IfJxOMX63WUL2wnW73oUAlcWU6xQ9idErp3653T1t2zhFIvMly2cYoUyhXJRSCEahXJRSCEahXJRSCEahXJRSCEahXJRSCEaheNyV0KE0bUNnPItdPZKFSCsrm3glG9h1m8YGTD6JipE5yIMb+95tbq80Pd6fHHhHTAIrluI3HpVt7AA7kOuW/gTmIuiW3gAPhB1C5FRcN1CZBRctxA5M1cthO5ErloI7blq4SvyWA7VwgdkaqZqYe39+lBa+OL9Gl9aCD1bRbUQmkCsWRhDX8VpFj5BO65ZCH0cqha20EoFzcJnaPqpZuE3aAaxZiE2RVqzEFuMoVgIPsVJsTDB9luxsH8JsHbhEVuroFgIrmtTPH4IjKyJC+1TciXgth/XfvwJGuOWHsc32ed9AUa5v1z5efSpjZyLIReFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKJRKBeFFKL9F0LwTjZTN5cwLwPoTq7TN5cwioMwneCpu0P+5VmELg2DSZ6cfHszCW3TCad4vvftzSQ0RSfE7gM6dfMI3TY8CRPoRqATN4+wSn4Lwxq6i+S0zSLM6vBdGO7mJ84hzHbhWRjW1dzvRXmhq+rwQxgmWwM8tGXChIXOmm0SXgrDsGiyKDezBd0Ja+jG8yhtivNWgostxuVmvu76G7zt8vK/7xd8NF9nar5dDQAAAABJRU5ErkJggg=="
+                        width="20" height="20"> <a href="https://www.facebook.com/">Facebook Page</a></center>
+</body>
+</html>
