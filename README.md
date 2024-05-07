@@ -120,6 +120,7 @@ Chitkara university - For giving us oppurtunity to work on such a project
 3. Third log :- 4th May at 2:52pm(IST) Home Page.
 4. Fourth log:- 5th May at 7:38pm(IST) Directing page attached to home page.
 5. Fifth log:- 7th May at 10:01am(IST) A folder is created names tribute bracnches so that all the tribute pages can be collected at one place only. First tribute page of Anita Borg has also been uploaded.
+6. Sixth log:- 7th May at 10:23PM(IST) A tribute page of Ada Lovelace has been uploaded in Tribute_Pages folder.
    
 
 
