@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          
+            h1{
+                font-size: xxx-large;
+            }
+            p{
+                font-size:xx-large;
+                color:black;
+            }
+            #grad1{
+                height: 2400px;
+                width: 1500px;
+                background-image: linear-gradient(to right,pink,rgb(12, 151, 151));
+                font-size: xx-large;
+            }
+            #grad2{
+                height:1000px;
+                width: 1500px;
+                background-image: linear-gradient(to right,pink,rgb(12, 151, 151));
+                font-size: xx-large;
+            }
+            * {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f4f8;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right:-17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.left {
+  left: 0;
+}
+.right {
+  left: 50%;
+}
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  .container {
+  width: 80%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+  .left::after, .right::after {
+  left: 15px;
+  }
+  .right {
+  left: 0%;
+  }
+}
+  ol{
+    font-size: larger;
+  }
+  ul{
+    font-size:x-large;
+  }
+  /* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #030005;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+button {
+ padding: 0.8em 1.8em;
+ border: 2px solid #17C3B2;
+ position: relative;
+ overflow: hidden;
+ background-color: transparent;
+ text-align: center;
+ text-transform: uppercase;
+ font-size: 16px;
+ transition: .3s;
+ z-index: 1;
+ font-family: inherit;
+ color: #17C3B2;
+}
+
+button::before{
+ content: '';
+ width: 0;
+ height: 300%;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%) rotate(45deg);
+ background: #17C3B2;
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+
+} 
+</style>
+          </head>
+          <body>
+            <center><img src="https://www.azquotes.com/picture-quotes/quote-the-more-i-study-the-more-insatiable-do-i-feel-my-genius-for-it-to-be-ada-lovelace-127-25-13.jpg" width="1500" height="900"></center>
+              <h1><center><button data-text="Awesome" class="button">
+                <span class="actual-text">&nbsp;ABOUT&nbsp;</span>
+                <span class="hover-text" aria-hidden="true">&nbsp;ABOUT&nbsp;</span>
+            </button></center></h1>
+              <p>
+                Ada King, Countess of Lovelace was born on 10 December 1815.She was an English mathematician and writer, chiefly known 
+                for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine.She was the 
+                <b>FIRST TO RECOGNISE THAT THE MACHINE HAD APPLICATIONS BEYOND PURE CALCULATION.</b>Her educational and social exploits 
+                brought her into contact with scientists such as Andrew Crosse, Charles Babbage, Sir David Brewster, Charles Wheatstone, 
+                Michael Faraday, and the author Charles Dickens, contacts which she used to further her education. Ada described her 
+                approach as "poetical science"and herself as an "Analyst".When she was eighteen, her mathematical talents led her to a 
+                long working relationship and friendship with fellow British mathematician Charles Babbage, who is known as "the father 
+                of computers". She was in particular interested in Babbage's work on the Analytical Engine.When Ada was twelve years 
+                old, this future "Lady Fairy", as Charles Babbage affectionately called her, decided she wanted to fly. Ada Byron went 
+                about the project methodically, thoughtfully, with imagination and passion. Her first step in February 1828, was to
+                construct wings. She investigated different material and sizes. She considered various materials for the wings: paper, 
+                oilsilk, wires, and feathers. She examined the anatomy of birds to determine the right proportion between the wings and 
+                the body. She decided to write a book, Flyology, illustrating, with plates, some of her findings. She decided what 
+                equipment she would need; for example, a compass, to "cut across the country by the most direct road", so that she
+                could surmount mountains, rivers, and valleys. Her final step was to integrate steam
+                with the "art of flying".</p>
+                <div id="grad1"><pre>
+                  <center><b><h1><u>TIMELINE</u></h1>
+                   </b></center></pre>
+                <div class="timeline">
+                    <div class="container left">
+                        <div class="content">
+                            <h2>1815</h2>
+<p>Ada Lovelace was born on December 10,
+1815. Her birth name was Augusta Ada Byron.</p>
+                             </div>
+                             </div>
+                              <div class="container right">
+                                <div class="content">
+                                  <h2>1828</h2>
+ <p>When Ada was only twelve she made a small
+ flying machine.</p>
+                                  </div>
+                                  </div>
+                                  <div class="container left">
+                                    <div class="content">
+                                    <h2>1833</h2>
+                                    <p>In 1833 while at a party in England Ada first
+meant Charles Babbage. She was fascinated by Babbage's
+ideas for a machine that could calculate numbers
+and presumably write letters. Ada was 17 when
+she meant Charles Babbage.</p>
+                                    </div>
+                                  </div>
+                                  <div class="container right">
+                                    <div class="content">
+                                      <h2>1837</h2>
+                                      <p>In 1837 Ada and Babbage tested the
+first computer program.And Ada wrote the first
+computer program.</p>
+                                    </div>
+                                  </div>
+                                  <div class="container left">
+                                    <div class="content">
+                                      <h2>1843</h2>
+                                      <p>Ada wrote a book about c.</p>
+                                      </div>
+                                      </div>
+                                      <div class="container right">
+                                        <div class="content">
+                                          <h2>1852</h2>
+                                          <p>On November 27, 1852 she died at the age
+ of 37.She died because she had cancer.</p>
+                                          </div>
+                                          </div>
+                </div>
+                </div>
+                                          
+                                            <center><h1><b><u><button data-text="Awesome" class="button">
+                                              <span class="actual-text">&nbsp;WORK&nbsp;</span>
+                                              <span class="hover-text" aria-hidden="true">&nbsp;WORK&nbsp;</span>
+                                          </button></u></b></h1></center>
+             <ol>
+              <li><i>Throughout her life, Lovelace was strongly interested in scientific developments 
+and fads of the day, including phrenology and mesmerism.</i></li>
+              <li><i>Lovelace first met Charles Babbage in June 1833, through their mutual friend
+Mary Somerville.Later that month, Babbage invited Lovelace to see the prototype for
+his difference engine.</i></li>
+              <li><i>Babbage was impressed by Lovelace's intellect and analytic skills. He called her <b>
+"The Enchantress of Number"</b>.</i></li>
+<li><i>During a nine-month period in 1842-43, Lovelace translated the Italian mathematician
+Luigi Menabrea's article on Babbage's newest proposed machine, 
+the Analytical Engine.</i></li>
+<li><i>In her notes, Ada Lovelace emphasised the difference between the Analytical Engine
+and previous calculating machines, particularly its ability to be programmed to 
+solve problems of any complexity.</i></li>
+<li><i>Later,she became the <b>FIRST COMPUTER PROGRAMMER</b></i></li>              
+</ol>
+<div id="grad2"><center><h1><b><u><button data-text="Awesome" class="button">
+  <span class="actual-text">&nbsp;BIOGRAPHY&nbsp;</span>
+  <span class="hover-text" aria-hidden="true">&nbsp;BIOGRAPHY&nbsp;</span>
+</button></u></b></h1></center>
+<ol>
+  <li>NOVELS AND PLAYS:</li></ol>
+  <ul><li><i>Lovelace is portrayed in Romulus Linney's 1977 play Childe Byron.</i></li>
+    <li><i>Lovelace features in John Crowley's 2005 novel, Lord Byron's Novel: The Evening Land, as an unseen character whose personality is forcefully depicted in her annotations and anti-heroic efforts to archive her father's lost novel.</i></li>
+    <li><i>The 2015 play Ada and the Engine by Lauren Gunderson portrays Lovelace and Charles Babbage in unrequited love, and it imagines a post-death meeting between Lovelace and her father.</i></li>
+    </ul>
+    <ol>
+      2.FILMS AND TELEVISIONS:</ol>
+      <ul>
+        <li><i>In the 1997 film Conceiving Ada,a computer scientist obsessed with Ada finds a way of communicating with her in the past by means of "undying information waves".</i></li>
+        <li><i>Lovelace, identified as Ada Augusta Byron, is portrayed by Lily Lesser in the second season of The Frankenstein Chronicles. She is employed as an "analyst" to provide the workings of a life-sized humanoid automaton. </i></li>
+        <li><i>Lovelace and Babbage appear as characters in the second season of the ITV series Victoria (2017). Emerald Fennell portrays Lovelace in the episode, "The Green-Eyed Monster".</i></li>
+        </ul>
+        <ol>
+          3.SOFTWARE
+          </ol>
+          <ul>
+            <li><i>The Cardano cryptocurrency platform, launched in 2017, uses Ada as the name for the cryptocurrency and Lovelace as the smallest sub-unit of an Ada.</i></li>
+            <li><i>In 2021, Lovelace was directly honoured in the codename of Nvidia's new GPU architecture featured in its RTX 4000 series. Ada Lovelace is the first Nvidia architecture to feature both a first and last name.</i></li>
+            </ul></div>
+          
+            <h1><b><center><u><button data-text="Awesome" class="button">
+              <span class="actual-text">&nbsp;DEATH&nbsp;</span>
+              <span class="hover-text" aria-hidden="true">&nbsp;DEATH&nbsp;</span>
+          </button></u></center></b></h1>
+            <p><i>Lovelace died at the age of 36 on 27 November 1852 due to cancer.Under her mother's influence, Ada had a religious transformation and was coaxed into repenting of her previous conduct and making Annabella her executor.</i></p>          
+          
+  <center>Thank you for reading!!<a href="https://en.wikipedia.org/wiki/Ada_Lovelace">Learn more</a></center>
+
+
+                                       
+            </body>
+     
