@@ -117,10 +117,11 @@ Chitkara university - For giving us oppurtunity to work on such a project
 
 1. First log:- 3rd May at 10:29pm(IST) for Readme file (Palak Sharma).
 2. Second log:- 4th May at 2:12pm(IST) Directing Page (Palak).
-3. Third log :- 4th May at 2:52pm(IST) Home Page.
-4. Fourth log:- 5th May at 7:38pm(IST) Directing page attached to home page.
-5. Fifth log:- 7th May at 10:01am(IST) A folder is created names tribute bracnches so that all the tribute pages can be collected at one place only. First tribute page of Anita Borg has also been uploaded.
-6. Sixth log:- 7th May at 10:23PM(IST) A tribute page of Ada Lovelace has been uploaded in Tribute_Pages folder.
+3. Third log :- 4th May at 2:52pm(IST) Home Page(Palak Sharma).
+4. Fourth log:- 5th May at 7:38pm(IST) Directing page attached to home page(Lakshita).
+5. Fifth log:- 7th May at 10:01am(IST) A folder is created names tribute bracnches so that all the tribute pages can be collected at one place only. First tribute page of Anita Borg has also been uploaded(Palak Sharma).
+6. Sixth log:- 7th May at 10:23PM(IST) A tribute page of Ada Lovelace has been uploaded in Tribute_Pages folder(Palak).
+7. Seventh log :- 7th May at 11:13pm (IST) Tribute pages on three various programmers have been uploaded (Palak).
    
 
 
