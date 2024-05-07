@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+          <style>
+            body{
+                background-color: black;
+            }
+        p{
+            text-align: left;    
+            font-size:xx-large;
+             background-color: black;   
+            color:rgb(251, 250, 250);
+            }
+        h1{
+            text-align: center;
+            font-size:100px;
+            background-color: black;
+            color: yellow;
+            font-family:'Times New Roman', Times, serif;
+        }
+        h2{
+          color: yellow;
+          font-size: larger;
+        }
+        div{
+            float: right;
+        }
+        body {
+  font-family: 'Source Sans Pro',Helvetica Neue,Helvetica,Arial,sans-serif; 
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+#timeline {
+  display: flex;
+  background-color: #031625;
+
+  &:hover {
+    .tl-item {
+      width: 23.3333%;
+    }
+  }
+}
+
+.tl-item {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  width: 25%;
+  height: 100vh;
+  min-height: 600px;
+  color: #fff;
+  overflow: hidden;
+  transition: width 0.5s ease;
+  
+  &:before, &:after {
+    transform: translate3d(0, 0, 0);
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+  }
+
+  &:after {
+    background: transparentize(#031625, 0.15);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  &:before {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 75%);
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(0, 0, 0) translateY(50%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  &:hover {
+    width: 30% !important;
+    
+    &:after {
+      opacity: 0;
+    }
+
+    &:before {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) translateY(0);
+      transition: opacity 1s ease, transform 1s ease 0.25s;
+    }
+    
+    .tl-content {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.75s ease 0.5s;
+    }
+
+    .tl-bg {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.tl-content {
+  transform: translate3d(0, 0, 0) translateY(25px);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 0 1.618em;
+  top: 55%;
+  opacity: 0;
+  
+  h1 {
+    font-family: 'Pathway Gothic One',Helvetica Neue,Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    color: #1779cf;
+    font-size: 1.44rem;
+    font-weight: normal;
+  }
+}
+
+.tl-year {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  
+  p {
+    font-family: 'Pathway Gothic One',Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 1.728rem;
+    line-height: 0;
+  }
+}
+
+.tl-bg {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  background-size: cover;
+  background-position: center center;
+  transition: filter 0.5s ease;
+  filter: grayscale(100%);
+}
+body {
+  font-family: 'Source Sans Pro',Helvetica Neue,Helvetica,Arial,sans-serif; 
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+#timeline {
+  display: flex;
+  background-color: #031625;
+
+  &:hover {
+    .tl-item {
+      width: 23.3333%;
+    }
+  }
+}
+
+.tl-item {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  width: 25%;
+  height: 100vh;
+  min-height: 600px;
+  color: #fff;
+  overflow: hidden;
+  transition: width 0.5s ease;
+  
+  &:before, &:after {
+    transform: translate3d(0, 0, 0);
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+  }
+
+  &:after {
+    background: transparentize(#031625, 0.15);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  &:before {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 75%);
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(0, 0, 0) translateY(50%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  &:hover {
+    width: 30% !important;
+    
+    &:after {
+      opacity: 0;
+    }
+
+    &:before {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) translateY(0);
+      transition: opacity 1s ease, transform 1s ease 0.25s;
+    }
+    
+    .tl-content {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.75s ease 0.5s;
+    }
+
+    .tl-bg {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.tl-content {
+  transform: translate3d(0, 0, 0) translateY(25px);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 0 1.618em;
+  top: 55%;
+  opacity: 0;
+  
+   h1{
+    font-family: 'Pathway Gothic One',Helvetica Neue,Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    color: #1779cf;
+    font-size: 1.44rem;
+    font-weight: normal;
+  }
+}
+
+.tl-year {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  
+  p {
+    font-family: 'Pathway Gothic One',Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 1.728rem;
+    line-height: 0;
+    color: white;
+  }
+}
+
+.tl-bg {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  background-size: cover;
+  background-position: center center;
+  transition: filter 0.5s ease;
+  filter: grayscale(100%);
+}
+h3{
+  font-size:300%;
+  color:yellow;
+}
+h4{
+  font-size: xx-large;
+  color: yellow;
+}
+h5{
+  font-size: larger;
+  color: white;
+}
+
+
+    </style>
+    </head>
+    <body>
+        <img src="https://www.azquotes.com/picture-quotes/quote-errors-using-inadequate-data-are-much-less-than-those-using-no-data-at-all-charles-babbage-1-41-84.jpg" width="1500" height="900">
+        <h1><u>ABOUT</u></h1>
+        
+        <div><center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Charles_Babbage_-_1860.jpg/800px-Charles_Babbage_-_1860.jpg" height="650" width="400"></center></div>
+        <left><pre><p>Charles Babbage was an English polymath. He was born on 26 December 1791.
+A mathematician, philosopher, inventor and mechanical engineer, Babbage 
+originated the concept of a digital programmable computer.Babbage is
+considered by some to be "father of the computer".Babbage is credited with
+inventing the first mechanical computer, the Difference Engine,that
+eventually led to more complex electronic designs, though all the essential
+ideas of modern computers are to be found in Babbage's Analytical Engine,
+programmed using a principle openly borrowed from the Jacquard loom.Babbage
+had a broad range of interests in addition to his work on computers covered
+n his 1832 book Economy of Manufactures and Machinery.Babbage's machines were
+among the first mechanical computers. That they were not actually completed
+was largely because of funding problems and clashes of personality, most
+notably with George Biddell Airy, the Astronomer Royal.While Babbage's 
+machines were mechanical and unwieldy, their basic architecture was similar
+to that of a modern computer. The data and program memory were separated, 
+operation was instruction-based, the control unit could make conditional 
+jumps, and the machine had a separate I/O unit.
+
+</p></pre>
+
+
+</left>
+<h1><u>TIMELINE</u></h1>
+<h2><center>(Place the cursor on the year)</center></h2>
+<section id="timeline">
+  
+  
+    <div class="tl-item">
+      
+      <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div>
+      
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">1791</p>
+      </div>
+  
+      <div class="tl-content">
+        <p>Charles Babbage was born.</p>
+        </div>
+  
+    </div>
+  
+    <div class="tl-item">
+      
+      <div class="tl-bg" style="background-image: url(https://placeimg.com/802/802/nature)"></div>
+      
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">1810</p>
+      </div>
+  
+      <div class="tl-content">
+        <p class="f3 text--accent ttu"> Entered Trinity College at Cambridge.</p>
+        
+      </div>
+  
+    </div>
+  
+    <div class="tl-item">
+      
+      <div class="tl-bg" style="background-image: url(https://placeimg.com/803/803/nature)"></div>
+      
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">1812</p>
+      </div>
+  
+      <div class="tl-content">
+        <p class="f3 text--accent ttu">Had an idea of using machinery to calculate mathematical tables.</p>
+        
+      </div>
+  
+    </div>
+  
+    <div class="tl-item">
+      
+      <div class="tl-bg" style="background-image: url(https://placeimg.com/800/800/nature)"></div>
+      
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">1815</p>
+      </div>
+  
+      <div class="tl-content">
+        <p class="f3 text--accent ttu">Babbage published an essay on calculus in the Philosophical Transactions of the Royal Society</p>
+        
+      </div>
+  
+    </div>
+    <div class="tl-item">
+      
+      <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div>
+      
+      <div class="tl-year">
+        <p class="f2 heading--sanSerif">1816</p>
+      </div>
+      <div class="tl-content">
+        <p class="f3 text--accent ttu">Babbage gave a series of lectures at the Royal Institution in London</p>
+        
+    </div>
+    </section>
+    <section id="timeline">
+  
+      <div class="tl-item">
+        
+        <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div>
+        
+        <div class="tl-year">
+          <p class="f2 heading--sanSerif">1822</p>
+        </div>
+    
+        <div class="tl-content">
+          <p>Charles published "Observations on the Application of Machinery to the Computation of Mathematical Tables"</p>
+          </div>
+    
+      </div>
+    
+      <div class="tl-item">
+        
+        <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div>
+        
+        <div class="tl-year">
+          <p class="f2 heading--sanSerif">1824</p>
+        </div>
+    
+        <div class="tl-content">
+          <p>The Astronomical Society awarded its first gold medal to Charles Babbage</p>
+          </div>
+    
+      </div>
+      <div class="tl-item">
+        
+        <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div>
+        
+        <div class="tl-year">
+          <p class="f2 heading--sanSerif">1851</p>
+        </div>
+    
+        <div class="tl-content">
+          <p> Charles Babbage conceived a way to send signals by occluding lights</p>
+          </div>
+    
+      </div>
+      <div class="tl-item">
+        
+        <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div>
+        
+        <div class="tl-year">
+          <p class="f2 heading--sanSerif">1864</p>
+        </div>
+    
+        <div class="tl-content">
+          <p> Charles Babbage published "Passages from the Life of a Philosopher"</p>
+          </div>
+    
+      </div>   
+        <div class="tl-item">
+        
+        <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div>
+        
+        <div class="tl-year">
+          <p class="f2 heading--sanSerif">1871</p>
+        </div>
+    
+        <div class="tl-content">
+          <p>Charles Babbage dies.</p>
+          </div>
+    
+      </div>
+      </section>
+      <h1><u>INVENTIONS</u></h1>    
+     <h3><u>Computer-</u></h3><pre><p>Charles Babbage, an English mechanical engineer and polymath, originated the concept of a programmable 
+computer.Considered the "father of the computer",[22] he conceptualized and invented the first mechanical 
+computer in the early 19th century computer is a machine that can be programmed to carry out sequences of 
+arithmetic or logical operations automatically.Modern digital electronic computers can perform generic 
+sets of operations known as programs. These programs enable computers to perform a wide range of tasks.
+A computer system is a nominally complete computer that includes the hardware, operating system and 
+peripheral equipment needed and used for full operation. This term may also refer to a group of computers 
+that are linked and function together, such as a computer network or computer cluster.
+<a href="https://en.wikipedia.org/wiki/Computer">Learn more</a>
+     </p></pre>
+     <h3><u>Analytical Engine-</u></h3><pre><p>The analytical engine was a proposed mechanical general-purpose computer designed by English 
+mathematician and computer pioneer Charles Babbage.It was first described in 1837 as the successor to 
+Babbage's difference engine, which was a design for a simpler mechanical calculator.The analytical engine
+incorporated an arithmetic logic unit, control flow in the form of conditional branching and loops, and 
+integrated memory, making it the first design for a general-purpose computer that could be described in 
+modern terms as Turing-complete.In other words, the structure of the analytical engine was essentially 
+the same as that which has dominated computer design in the electronic era.The analytical engine is one 
+of the most successful achievements of Charles Babbage.
+<a href="https://en.wikipedia.org/wiki/Analytical_engine#:~:text=The%20analytical%20engine%20was%20a,for%20a%20simpler%20mechanical%20calculator.">Learn more</a>
+           </p></pre>
+           <h3><u>Difference Engine-</u></h3><pre><p>A difference engine is an automatic mechanical calculator designed to tabulate polynomial 
+functions. It was designed in the 1820s, and was first created by Charles Babbage. The name difference 
+engine is derived from the method of divided differences, a way to interpolate or tabulate functions by
+using a small set of polynomial co-efficients. Some of the most common mathematical functions used in 
+engineering, science and navigation, are built from logarithmic and trigonometric functions, which can 
+be approximated by polynomials, so a difference engine can compute many useful tables.
+<a href="https://en.wikipedia.org/wiki/Difference_engine#:~:text=A%20difference%20engine%20is%20an,first%20created%20by%20Charles%20Babbage.">Learn more</a>
+
+           </p></pre>
+           <h1><u>DEATH</u></h1>  
+<p>Babbage lived and worked for over 40 years at 1 Dorset Street, Marylebone, where he died, at the age of 79, on 18 October 1871.
+  According to Horsley, Babbage died "of renal inadequacy, secondary to cystitis."
+</p>
+<h4><center>Thank you!!</center></h4>
+<h5>If you want to know more then <a href="https://en.wikipedia.org/wiki/Charles_Babbage#">Click here</a></h5>
+    </body>
+    </html>
