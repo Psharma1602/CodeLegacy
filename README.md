@@ -122,6 +122,7 @@ Chitkara university - For giving us oppurtunity to work on such a project
 5. Fifth log:- 7th May at 10:01am(IST) A folder is created names tribute bracnches so that all the tribute pages can be collected at one place only. First tribute page of Anita Borg has also been uploaded(Palak Sharma).
 6. Sixth log:- 7th May at 10:23PM(IST) A tribute page of Ada Lovelace has been uploaded in Tribute_Pages folder(Palak).
 7. Seventh log :- 7th May at 11:13pm (IST) Tribute pages on three various programmers have been uploaded (Palak).
+8. 8. Eighth log :- 8th may at 9:14am (IST) Rest of the tribute pages have been uploaded. (Palak Sharma).
    
 
 
