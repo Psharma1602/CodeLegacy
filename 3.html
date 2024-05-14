@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tribute Page for James Gosling</title>
+	<style>@media (prefers-reduced-motion: no-preference) {
+        * {
+          scroll-behavior: smooth;
+        }
+      }
+      
+      body{
+          background-color: #bcb8b1;
+          font-family: Verdana;
+          color: #463f3a;
+          margin: 0;
+      }
+      
+      h1, p{
+          text-align: center;
+      }
+      
+      #title{
+          font-weight: 100;
+          font-size: 50px;
+          letter-spacing: 5px;
+          margin: 10px 0 0 0;
+      }
+      
+      p{
+          font-size: 30px;
+          letter-spacing: 1px;
+          margin: 0 0 40px;
+      }
+      
+      nav {
+          background: #f5f2e3;
+          text-align: center;
+          width: 100%;
+            max-width: 100%;
+            height: 50px;
+            margin: 15px 0 0;
+            border-top: 2px solid #463f3a;
+            border-bottom: 2px solid #463f3a;
+      }
+      
+      nav > ul {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        padding-inline-start: 0;
+        margin-block: 0;
+        height: 100%;
+        letter-spacing: 5px;
+      }
+      
+      nav > ul > li {
+        color: #463f3a;
+        margin: 0.2rem;
+        padding: 0.5rem;
+        display: block;
+        font-size: 18px;
+      }
+      
+      nav ul li a:hover {
+        color: #463f3a;
+        cursor: pointer;
+      }
+      
+      li > a {
+        color: inherit;
+        text-decoration: none;
+      }
+      
+      #img-div{
+          display: flex;
+          flex-direction: column;
+          flex-wrap: unwrap;
+          height: 100%;
+          width: 100vw;
+          margin: 0;
+          text-align: center;
+      }
+      
+      img{
+          align-items: center;
+          margin: 0;
+          max-width: 100%;
+          max-height: 600px;
+          object-fit: cover;
+      }
+      
+      figcaption{
+          margin: 10px 30px;
+          text-align: left;
+      }
+      
+      .divider-1 {
+        border-bottom: 2px double dimgray;
+        margin: 70px 30px;
+      }
+      
+      #tribute-info{
+          margin: 0;
+          background-color: #f5f2e3;
+          padding: 2% 10%;
+        height: 100%;
+      }
+      
+      h2{
+          font-size: 30px;
+          text-align: center;
+          margin: 30px 0;
+          text-transform: uppercase;
+      }
+      
+      #about{
+          margin: 20px 0 30px;
+        width: auto;
+      }
+      
+      #about p{
+          font-size: 18px;
+          margin: 0 20px 50px;
+      }
+      
+      #timeline{
+          margin: 50px 0 0;
+      }
+      
+      #timeline ul > li{
+          font-size: 18px;
+          margin: 0 20px 20px;
+      }
+      
+      .divider-2 {
+        font-size: 40px;
+        font-weight: lighter;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+      }
+      
+      .divider-2::before, .divider-2::after {
+        flex: 1;
+        content: '';
+        padding: 1px;
+        background-color: dimgray;
+        margin: 40px;
+      }
+      
+      #link{
+          margin: 0;
+          padding:  5% 10%;
+          text-align: center;
+          background-color: #bcb8b1;
+          border-top: 2px solid #463f3a;
+      }
+      
+      #link p{
+          text-align: center;
+          font-size: 25px;
+          margin: auto;
+      }
+      
+      #link ul{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+      }
+      
+      #link li {
+          text-align: center;
+          font-weight: lighter;
+        margin: 10px;
+        padding: 2%;
+        width: 30%;
+        font-size: 18px;
+        background: #463f3a;
+        border: 3px solid #f5f2e3;
+        color: #f5f2e3;
+        list-style: none;
+      }
+      
+      #tribute-link{
+          text-decoration: none;
+      }
+      
+      #link li:hover{
+          background: inherit;
+          color: #463f3a;
+          border: 3px solid #463f3a;
+      }
+      
+      footer p{
+          font-size: 18px;
+          color: #f5f2e3;
+          margin: 0;
+          padding: 1.5em;
+          background-color: #463f3a;
+      }
+      @import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+
+body{
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+}
+
+header h1{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0;
+}
+  
+ header p{
+   text-align: center;
+   margin-bottom: 0;
+ }
+
+.hexa{
+  border: 0px;
+  float: left;
+  text-align: center;
+  height: 35px;
+  width: 60px;
+  font-size: 22px;
+  background: #f0f0f0;
+  color: #3c3c3c;
+  position: relative;
+  margin-top: 15px;
+}
+
+.hexa:before{
+  content: ""; 
+  position: absolute; 
+  left: 0; 
+  width: 0; 
+  height: 0;
+  border-bottom: 15px solid #f0f0f0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  top: -15px;
+}
+
+.hexa:after{
+  content: ""; 
+  position: absolute; 
+  left: 0; 
+  width: 0; 
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 15px solid #f0f0f0;
+  bottom: -15px;
+}
+
+.timeline {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: ' ';
+  display: block;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  background: rgb(213,213,213);
+  background: -moz-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+  background: -webkit-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
+  background: -o-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
+  background: -ms-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
+  background: linear-gradient(to bottom, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
+  z-index: 5;
+}
+
+.timeline li {
+  padding: 2em 0;
+}
+
+.timeline .hexa{
+  width: 16px;
+  height: 10px;
+  position: absolute;
+  background: #463f3a;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  margin-left:auto;
+  margin-right:auto;
+  top: -30px;
+  margin-top: 0;
+}
+
+.timeline .hexa:before {
+  border-bottom: 4px solid #463f3a;
+  border-left-width: 8px;
+  border-right-width: 8px;
+  top: -4px;
+}
+
+.timeline .hexa:after {
+  border-left-width: 8px;
+  border-right-width: 8px;
+  border-top: 4px solid #463f3a;
+  bottom: -4px;
+}
+
+.direction-l,
+.direction-r {
+  float: none;
+  width: 100%;
+  text-align: center;
+}
+
+.flag-wrapper {
+  text-align: center;
+  position: relative;
+}
+
+.flag {
+  position: relative;
+  display: inline;
+  background: rgb(255,255,255);
+  font-weight: 600;
+  z-index: 15;
+  padding: 6px 10px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.direction-l .flag:after,
+.direction-r .flag:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -15px;
+  height: 0;
+  width: 0;
+  margin-left: -8px;
+  border: solid transparent;
+  border-bottom-color: rgb(255,255,255);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.direction-l .flag {
+  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.direction-r .flag {
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.time-wrapper {
+  display: block;
+  position: relative;
+  margin: 4px 0 0 0;
+  z-index: 14;
+  line-height: 1em;
+  color: #fff;
+}
+
+.direction-l .time-wrapper {
+  float: none;
+}
+
+.direction-r .time-wrapper {
+  float: none;
+}
+
+.time {
+  background: #463f3a;
+  display: inline-block;
+  padding: 8px;
+}
+
+.desc {
+  position: relative;
+  margin: 1em 0 0 0;
+  padding: 1em;
+  background: rgb(254,254,254);
+  -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+  -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+  box-shadow: 0 0 1px rgba(0,0,0,0.20);
+  z-index: 15;
+}
+
+.direction-l .desc,
+.direction-r .desc {
+  position: relative;
+  margin: 1em 1em 0 1em;
+  padding: 1em;
+  z-index: 15;
+}
+
+@media(min-width: 768px){
+  .timeline {
+    width: 660px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .timeline li:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  
+  .timeline .hexa {
+    left: -28px;
+    right: auto;
+    top: 8px;
+  }
+
+  .timeline .direction-l .hexa {
+    left: auto;
+    right: -28px;
+  }
+
+  .direction-l {
+    position: relative;
+    width: 310px;
+    float: left;
+    text-align: right;
+  }
+
+  .direction-r {
+    position: relative;
+    width: 310px;
+    float: right;
+    text-align: left;
+  }
+
+  .flag-wrapper {
+    display: inline-block;
+  }
+  
+  .flag {
+    font-size: 18px;
+  }
+
+  .direction-l .flag:after {
+    left: auto;
+    right: -16px;
+    top: 50%;
+    margin-top: -8px;
+    border: solid transparent;
+    border-left-color: rgb(254,254,254);
+    border-width: 8px;
+  }
+
+  .direction-r .flag:after {
+    top: 50%;
+    margin-top: -8px;
+    border: solid transparent;
+    border-right-color: rgb(254,254,254);
+    border-width: 8px;
+    left: -8px;
+  }
+
+  .time-wrapper {
+    display: inline;
+    vertical-align: middle;
+    margin: 0;
+  }
+
+  .direction-l .time-wrapper {
+    float: left;
+  }
+
+  .direction-r .time-wrapper {
+    float: right;
+  }
+
+  .time {
+    padding: 5px 10px;
+  }
+
+  .direction-r .desc {
+    margin: 1em 0 0 0.75em;
+  }
+}
+
+@media(min-width: 992px){
+  .timeline {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .direction-l {
+    position: relative;
+    width: 380px;
+    float: left;
+    text-align: right;
+  }
+
+  .direction-r {
+    position: relative;
+    width: 380px;
+    float: right;
+    text-align: left;
+  }
+}</style>
+</head>
+<body>
+	<main id="main">
+		<h1 id="title">James Gosling</h1>
+		<p>Father of JAVA</p>
+		
+		<nav>
+			<ul>
+				<li><a href="#about" class="hover">ABOUT</a></li>
+				<li><a href="#timeline" class="hover">TIMELINE</a></li>
+				<li><a href="#tribute-link" class="hover">LEARN MORE</a></li>
+			</ul>
+		</nav>
+
+		<div id="img-div">
+			<img src="https://img.electronicdesign.com/files/base/ebm/electronicdesign/image/2019/03/electronicdesign_5561_hof_gosling_595x335.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630">
+		</div>
+		
+		<div id="tribute-info">
+			<div id="about">
+				<div class="divider-2">about</div>
+				<p>James Gosling, born on May 19, 1955, is a distinguished Canadian computer scientist renowned as the creator of the Java programming language. His pivotal role at Sun Microsystems in the 1980s led to the development and release of Java in 1995, transforming software development with its platform independence. Gosling's "Father of Java" title reflects his instrumental contributions to the language's design and evolution. Beyond Java, his influence encompasses significant work in the NeWS window system and the original Java virtual machine design, solidifying his legacy as a trailblazer in the computing industry.</p>
+			</div>
+
+		
+			<div id="timeline">
+				<div>
+					<div class="divider-2">Timeline</div>
+					<ul class="timeline">
+                        <!-- Item 1 -->
+                        <li>
+                          <div class="direction-r">
+                            <div class="flag-wrapper">
+                              <span class="hexa"></span>
+                              <span class="flag">Birth and Early Years</span>
+                              <span class="time-wrapper"><span class="time">1955</span></span>
+                            </div>
+                            <div class="desc">James Arthur Gosling is born on May 19, 1955, in Calgary, Alberta, Canada. Growing up, his fascination with technology and programming begins to manifest.</div>
+                        </li>
+                      
+                        <!-- Item 2 -->
+                        <li>
+                          <div class="direction-l">
+                            <div class="flag-wrapper">
+                              <span class="hexa"></span>
+                              <span class="flag">Sun Microsystems</span>
+                              <span class="time-wrapper"><span class="time">1984</span></span>
+                            </div>
+                            <div class="desc">In the early 1980s, Gosling starts his career at Sun Microsystems, a pivotal moment that shapes the trajectory of his professional life. His early work involves contributing to the development of the NeWS windowing system.</div>
+                        </li>
+                      
+                        <!-- Item 3 -->
+                        <li>
+                          <div class="direction-r">
+                            <div class="flag-wrapper">
+                              <span class="hexa"></span>
+                              <span class="flag">NeWS Window System</span>
+                              <span class="time-wrapper"><span class="time">1987</span></span>
+                            </div>
+                            <div class="desc">Gosling's significant involvement in the creation of the NeWS windowing system, introduced in the mid-1980s, showcases his expertise in graphics and programming languages. NeWS, utilizing the PostScript page description language, highlights Gosling's commitment to advancing software development.</div>
+                        </li>
+
+                        <!-- Item 4 -->
+                        <li>
+                            <div class="direction-l">
+                              <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">The Green Project</span>
+                                <span class="time-wrapper"><span class="time">Late 1980s to Early 1990s</span></span>
+                              </div>
+                            <div class="desc">Gosling becomes a key participant in the Green Project at Sun Microsystems, initiated to explore innovative possibilities in computer programming. This project becomes a crucial precursor to Gosling's groundbreaking work on the Java programming language.</div>
+                        </li>
+                        <!-- Item 5 -->
+                        <li>
+                            <div class="direction-r">
+                              <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">Java's Inception</span>
+                                <span class="time-wrapper"><span class="time">1991</span></span>
+                              </div>
+                            <div class="desc">Inspired by the challenges of programming diverse devices, Gosling initiates the development of the Java programming language. The project aims for portability and platform independence, with the goal of allowing code to run on various systems without modification.</div>
+                        </li>
+                        <!-- Item 6 -->
+                        <li>
+                            <div class="direction-l">
+                              <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">Java's Debut</span>
+                                <span class="time-wrapper"><span class="time">1995</span></span>
+                              </div>
+                            <div class="desc">The culmination of Gosling's efforts results in the official release of Java in 1995. Java introduces the revolutionary concept of "Write Once, Run Anywhere," transforming the landscape of software development and marking Gosling as a pioneering figure in the field.</div>
+                        </li>
+                        <!-- Item 7 -->
+                        <li>
+                            <div class="direction-r">
+                              <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">Java Virtual Machine (JVM)</span>
+                                <span class="time-wrapper"><span class="time">Late 1990s</span></span>
+                              </div>
+                            <div class="desc">Gosling focuses on the development of the Java Virtual Machine (JVM), a critical component that enhances Java's cross-platform compatibility. The JVM allows Java applications to run on any device that supports the virtual machine, contributing significantly to Java's widespread adoption.</div>
+                        </li>
+                        <!-- Item 8 -->
+                        <li>
+                            <div class="direction-l">
+                              <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">Continued Impact</span>
+                                <span class="time-wrapper"><span class="time">2000s</span></span>
+                              </div>
+                            <div class="desc">Throughout the 2000s, Gosling remains a prominent figure in the technology industry. His insights and contributions extend beyond Java, encompassing areas such as robotics, artificial intelligence, and software development methodologies. Gosling's versatility and adaptability are evident in his ability to traverse different domains.</div>
+                        </li>
+                        <!-- Item 9 -->
+                        <li>
+                            <div class="direction-r">
+                              <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">Oracle Acquisition and Departure</span>
+                                <span class="time-wrapper"><span class="time">2010</span></span>
+                              </div>
+                            <div class="desc">Oracle Corporation acquires Sun Microsystems in 2010. Concerned about Oracle's direction, Gosling decides to leave the company, marking a significant transition in his career. His departure signals a new chapter as he seeks fresh opportunities and challenges.</div>
+                        </li>
+                         <!-- Item 10 -->
+                         <li>
+                            <div class="direction-l">
+                              <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">Post-Oracle Ventures</span>
+                              </div>
+                            <div class="desc">Following his departure from Oracle, Gosling explores new ventures, particularly in the realms of robotics and autonomous vehicles. This phase reflects his ongoing curiosity and commitment to staying at the forefront of technological advancements beyond traditional software development.</div>
+                        </li>
+                         <!-- Item 11 -->
+                         <li>
+                            <div class="direction-r">
+                              <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">Public Engagement and Writing</span>
+                              </div>
+                            <div class="desc">Gosling engages with the broader tech community through blog posts and public speaking engagements, sharing his experiences and insights. His articulate communication style and thought leadership contribute to the discourse on technology trends and advancements.</div>
+                        </li>
+                        <!-- Item 12 -->
+                        <li>
+                            <div class="direction-l">
+                              <div class="flag-wrapper">
+                                <span class="hexa"></span>
+                                <span class="flag">Legacy and Influence</span>
+                              </div>
+                            <div class="desc">James Gosling's impact on the computing industry is enduring. His legacy is shaped by the creation of Java, his contributions to programming languages, and his ability to traverse diverse technological domains. As a visionary and influential figure, Gosling continues to inspire future generations of developers and technologists.</div>
+                        </li>
+                    </ul>
+				</div>
+			</div>
+		</div>
+		<div id="tribute-link">
+      <br>
+      <p class="tribute-source" id="tribute-source" style="text-align: center;">I encourage you
+        to
+        read
+        more about James Gosling at <a id="tribute-link" target="_blank"
+            href="https://en.wikipedia.org/wiki/James_gosling">Wikipedia
+            page.</a></p>
+    <hr>
+    <h1 style="color: #554c47; font-size: xx-large;">THANK YOU FOR READING !!</h1>
+		</div>
+	</main>
+</body>
+</html>
