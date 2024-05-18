@@ -1,4 +1,4 @@
-CodeLegacy
+https://github.com/pullsCodeLegacy
 
 ## Description
 
@@ -125,6 +125,8 @@ Chitkara university - For giving us oppurtunity to work on such a project
 8. Eighth log :- 8th may at 9:14am (IST) Rest of the tribute pages have been uploaded. (Palak Sharma).
 9. Ninth log:- 17th May at 12:46pm (IST) Alan Turing, Anita Borg, Steve Jobs and Tim Berners Lee quizes. (Palak Sharma).
 10. Tenth log:- 17th May at 10:15pm (IST) The other three quizes has been released.(Palak)
+11. Eleventh log:- 18th May at 5:20pm (IST) The four other quizzes have been released.(Lakshita)
+12. Twelfth log:- 18th May at 9:18pm (IST) The quizzes have been linked to the home page.(Lakshita)
 
    
 
