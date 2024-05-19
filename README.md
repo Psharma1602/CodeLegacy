@@ -95,9 +95,7 @@ Action Steps
 3. Recommendation: If you encounter any difficulties while using our website on Google Chrome, we recommend trying an alternative browser such as Microsoft Edge to ensure a seamless experience.
 Reporting Issues: If you experience persistent issues or have any feedback regarding browser compatibility, please don't hesitate to report them to our support team. We are committed to continuously improving the user experience for all our visitors.
 
-## Resources
 
-List any additional resources, such as documentation, tutorials, or related projects, that users might find helpful.
 
 ## Contact Information
 ## Email of the team is as follows:
