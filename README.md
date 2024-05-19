@@ -128,9 +128,4 @@ Chitkara university - For giving us oppurtunity to work on such a project
 11. Eleventh log:- 18th May at 5:20pm (IST) The four other quizzes have been released.(Lakshita)
 12. Twelfth log:- 18th May at 9:18pm (IST) The quizzes have been linked to the home page.(Lakshita)
 13. Thirteenth log:- 18th May at 10:08pm (IST) The login page and registration page has been pushed.(Palak Sharma)
-    
-
-   
-
-
-
+14. Fourteenth log:- 19th May at 1:28pm (IST) The review page has been added.(Lakshita)
