@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>CodeLegacy</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="icon" type="image/x-icon" href="C:\Users\Lenovo\Pictures\Screenshots\Screenshot 2023-11-08 093822.png">
+ <script>alert("This page contains very informative information!!!!!")</script>
+</head>
+<style type="text/css">
+*{
+ margin: 0px;
+ padding: 0px;
+}
+body {
+    background-color: #ffffff;
+    color: rgb(6, 54, 74);
+    font-family: arial;
+ overflow-y:scroll ;
+}
+/* Dark Theme */
+body.dark {
+    background-color: #333333;
+    color: rgb(153, 142, 23);
+}
+.main{
+margin: 2%;
+}
+.card{
+     width: 20%;
+     display: inline-block;
+     box-shadow: 2px 2px 20px black;
+     border-radius: 5px; 
+     margin: 2%;
+     background-color: lightgray;
+    }
+
+.image img{
+  width: 100%;
+  height:100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  }
+  .title{
+ 
+ text-align: center;
+ padding: 10px;
+ 
+}
+
+h1{
+ font-size: 20px;
+}
+
+.des{
+ padding: 3px;
+ text-align: center;
+
+ padding-top: 10px;
+ border-bottom-right-radius: 5px;
+ border-bottom-left-radius: 5px;
+}
+button{
+ margin-top: 40px;
+ margin-bottom: 10px;
+ background-color: white;
+ border: 1px solid black;
+ border-radius: 5px;
+ padding:10px;
+}
+button:hover{
+ background-color: black;
+ color: white;
+ transition: .5s;
+ cursor: pointer;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #D8D8D8;
+}
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+
+
+
+
+
+label,
+main {
+	background: var(--bg, white);
+	color: var(--text, black);
+}
+
+main {
+	--gradDark: hsl(144, 100%, 89%);
+	--gradLight: hsl(42, 94%, 76%);
+	background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+	padding: 120px 40px 40px 40px;
+	min-height: 100vh;
+	text-align: center;
+}
+
+
+
+.theme-switch__input:checked ~ main,
+.theme-switch__input:checked ~ label {
+	--text: white;
+}
+
+.theme-switch__input:checked ~ main {
+	--gradDark: hsl(198, 44%, 11%);
+	--gradLight: hsl(198, 39%, 29%);
+}
+
+
+
+.theme-switch__input,
+.theme-switch__label {
+	position: absolute;
+	z-index: 1;
+}
+
+.theme-switch__input {
+	opacity: 0;
+	
+	&:hover,
+	&:focus {
+		+ .theme-switch__label {
+			background-color: lightSlateGray;
+		}
+		
+		+ .theme-switch__label span::after {
+			background-color: lighten(lightBlue, 10%);
+		}
+	}
+}
+
+.theme-switch__label {
+	padding: 20px;
+	margin: 60px;
+	transition: background-color 200ms ease-in-out;
+	width: 120px;
+	height: 50px;
+	border-radius: 50px;
+	text-align: center;
+	background-color: slateGray;
+	box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+	
+	&::before,
+	&::after {
+		font-size: 2rem;
+		position: absolute;
+		transform: translate3d(0, -50%, 0);
+		top: 50%;
+	}
+	
+	&::before {
+		content: '\263C';
+		right: 100%;
+		margin-right: 10px;
+		color: orange;
+	}
+	
+	&::after {
+		content: '\263E';
+		left: 100%;
+		margin-left: 10px;
+		color: lightSlateGray;
+	}
+	
+	span {
+		position: absolute;
+		bottom: calc(100% + 10px);
+		left: 0;
+		width: 100%;
+	}
+	
+	span::after {
+		position: absolute;
+		top: calc(100% + 15px);
+		left: 5px;
+		width: 40px;
+		height: 40px;
+		content: '';
+		border-radius: 50%;
+		background-color: lightBlue;
+		transition: transform 200ms, background-color 200ms;
+		box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+	}
+}
+
+
+.theme-switch_input:checked ~ .theme-switch_label {
+		background-color: lightSlateGray;
+	
+	&::before {
+		color: lightSlateGray;
+	}
+	
+	&::after {
+		color: turquoise;
+	}
+	
+	span::after {
+		transform: translate3d(70px, 0, 0);
+	}
+}
+
+
+</style>
+
+<body>
+
+   <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">CodeLegacy</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="">Home</a></li>
+          </li>
+          <li class="active"><a href="file:///C:/Users/Lenovo/Desktop/FEE1/review.html">Review</a>
+         </li>
+         <li class="active"><a href="file:///C:/Users/Lenovo/Desktop/FEE1/About%20us.html">About Us</a>
+         </li>
+         <ul class="nav navbar-nav navbar-right">
+          <li><a href="file:///C:/Users/Lenovo/Desktop/FEE1/sign%20up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="file:///C:/Users/Lenovo/AppData/Local/Microsoft/Windows/INetCache/IE/J91X2VNL/login_page[1].html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="page">
+      <!--Theme switch-->
+      <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input" />
+      <label for="themeSwitch" class="theme-switch__label">
+         <span>Switch theme</span>
+      </label>
+      
+      <!--Main page content-->
+      <main>
+         <div class="wrapper">
+        
+      
+ 
+    <center>
+      <img src="C:\Users\Lenovo\Pictures\Screenshots\Screenshot 2023-11-08 093822.png" width="150px" height="150px">
+    <h1 class="home-title">
+      <span style="color: black; font-family: cursive;font-size: 45px;"><u><b><i>CodeLegacy</i></b></u></span>
+    
+    </h1>
+   </center>
+   
+   
+
+<div class="main">
+
+   <div class="card">
+
+      <div class="image">
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnsNYBQ23v9dxxfwlDRXlLnR8KAbrS7mTwYDurRUx2FihYC_SQe8dcuNkN7Hru8wStvkg&usqp=CAU">
+      </div>
+      <div class="pal">
+      <div class="title">
+       <h1>
+      Alan Turing</h1>
+      </div>
+      <div class="des">
+       <p>Way to tribute page...</p>
+      <button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/project.html">Read More...</a>
+         </button><br>
+         <button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/test.html">Play Quiz...</a>
+      </button>
+      </div>
+      </div>
+      </div>
+      <!--cards -->
+      
+      
+      <div class="card">
+      
+      <div class="image">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Tim Berners Lee</h1>
+      </div>
+      <div class="des">
+       <p>Way to tribute page...</p>
+      <button>
+          <a target="_blank" href="file:///C:/Users/Lenovo/Desktop/html.2.html">Read More...</a></button><br>
+          <button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/test.html">Play Quiz...</a>
+      </div>
+      </div>
+      
+      
+      
+      <div class="card">
+      
+      <div class="image">
+         <img src="https://wpassets.ncwit.org/wp-content/uploads/2021/05/14024813/291.jpg">
+      </div>
+      <div class="title">
+       <h1>
+      Anita Borg</h1>
+      </div>
+      <div class="des">
+       <p>Way to tribute page...</p>
+      <button>
+          <a target="_blank" href="C:\Users\Lenovo\Desktop\FEE1\anita borg.html">Read More...</a></button><br>
+          <button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/test.html">Play Quiz...</a>
+      </div>
+      </div>
+      
+      <div class="card">
+      
+         <div class="image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Steve_Jobs.jpg">
+         </div>
+         <div class="title">
+          <h1>
+         Steve Jobs</h1>
+         </div>
+         <div class="des">
+          <p>Way to tribute page...</p>
+         <button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/st2.html">Read More...</a></button><br>
+            <button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/test.html">Play Quiz...</a>
+         
+         </button>
+         </div>
+         </div>
+
+
+
+
+
+<div class="card">
+
+<div class="image">
+   <img src="https://media.newyorker.com/photos/64123041652f9d9fe976fff0/master/pass/ra1146.jpg">
+</div>
+<div class="title">
+ <h1>
+Ada Lovelace</h1>
+</div>
+<div class="des">
+ <p>Way to tribute page</p>
+<button>
+   <a target="_blank" href="file:///C:/Users/Lenovo/Desktop/project%20p.html">Read More...</a></button><br>
+   <button>
+      <a target="_blank" href="C:/Users/Lenovo/Desktop/FEE1/quiz1.html">Play Quiz</a>
+   </button>
+</div>
+</div>
+
+
+
+<div class="card">
+
+<div class="image">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Charles_Babbage_-1860.jpg/800px-Charles_Babbage-_1860.jpg">
+</div>
+<div class="title">
+ <h1>
+Charles Babbage</h1>
+</div>
+<div class="des">
+ <p>Way to tribute page</p>
+<button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/project%202.html">Read More...</a></button><br>
+
+<button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/quiz2.html">Play Quiz</a></button>
+</div>
+</div>
+<!--cards -->
+
+<div class="card">
+
+<div class="image">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Annie_Easley.jpg">
+</div>
+<div class="title">
+ <h1>
+Annie Easley</h1>
+</div>
+<div class="des">
+ <p>Way to tribute page...</p>
+<button>
+   <a target="_blank" href="file:///C:/Users/Lenovo/Desktop/project%203.html">Read More...</a></button><br>
+  <button> <a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/quiz3.html">Play Quiz</a></button>
+</div>
+</div>
+<!--cards -->
+
+<div class="card">
+
+   <div class="image">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuaeIMHEWcWv3Wus93aTKiLarlfhPCGZsIwDRQvLVvJiFc1ZtkdnSWoYBL8tarlUyoyAw&usqp=CAU">
+   </div>
+   <div class="title">
+    <h1>Arvind Krishna Joshi</h1>
+   </div>
+   <div class="des">
+    <p>Way to tribute page...</p>
+   <button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/Project%204.html">Read More...</a>
+   
+   </button><br>
+  <button> <a  href="C:/Users/Lenovo/Desktop/FEE1/quiz4.html">Play Quiz</a></button>
+   </div>
+   </div>
+
+
+<div class="card">
+
+<div class="image">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Commodore_Grace_M.Hopper%2C_USN%28covered%29.jpg">
+</div>
+<div class="title">
+ <h1>
+Grace Hopper</h1>
+</div>
+<div class="des">
+ <p>Way to tribute page...</p>
+<button>
+   <a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/GRACE%20HOPPER.html">Read More...</a></button><br>
+   <button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/quizgrace.html">Play Quiz</a></button>
+
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="data:image/jpeg;base64,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">
+</div>
+<div class="title">
+ <h1>
+Margaret Hamilton</h1>
+</div>
+<div class="des">
+ <p>Way to tribute page...</p>
+<button><a target="_blank" href="C:\Users\Lenovo\Desktop\Margaret Hamilton.html">Read more...</a></button><br>
+<button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/quizmargaret.html">Play Quiz</a></button>
+</div>
+</div>
+<!--cards -->
+
+
+<div class="card">
+
+<div class="image">
+   <img src="data:image/jpeg;base64,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">
+</div>
+<div class="title">
+ <h1>
+Dennis Ritchie</h1>
+</div>
+<div class="des">
+ <p>Way to tribute page...</p>
+<button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/DENNIS%20RITCHIE.html"> Read More...</a></button><br>
+<button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/quizdennis.html">Play Quiz</a></button>
+</div>
+</div>
+<div class="card">
+
+   <div class="image">
+      <img src="https://i.imgur.com/lAi4VEJ.png?1">
+   </div>
+   <div class="title">
+    <h1>James Gosling</h1>
+   </div>
+   <div class="des">
+    <p>Way to tribute page...</p>
+   <button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/JAMES%20GOSLING.html">Read More...</a></button><br>
+   <button><a target="_blank" href="file:///C:/Users/Lenovo/Desktop/FEE1/quizdennis.html">Play Quiz..</a>
+   </div>
+   </div>
+   
+      </div>
+      </main>
+
+</div>  
+   
+</div>
+</body>
+</html>
