@@ -129,4 +129,4 @@ Chitkara university - For giving us oppurtunity to work on such a project
 13. Thirteenth log:- 18th May at 10:08pm (IST) The login page and registration page has been pushed.(Palak Sharma)
 14. Fourteenth log:- 19th May at 1:28pm (IST) The review page has been added.(Lakshita)
 15. Fifteenth log:- 19th May at 1:34pm (IST) The signup page has been added.(Lakshita)
-
+16. Sixteenth log:- 20th May at 10:23am(IST) Version 1 renamed.(Palak)
